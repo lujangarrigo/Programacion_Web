@@ -1,0 +1,12 @@
+body{
+    background-color: bisque;
+}
+h1{
+    text-align: center;
+}
+button{
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}

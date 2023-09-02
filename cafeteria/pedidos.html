@@ -4,12 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedidos</title>
+    <link rel="stylesheet" href="css/pedidos.css">
 </head>
 <body style="background-color: beige;">
-
-    <h1 align="center">Datos de contacto:</h1>
+    <h1>Realizar pedido:</h1>
     <hr>
-    <p align="center">Whatsapp: +54 9 11 7760-7760 | <a href="https://www.instagram.com/alpasotrevelin/" target="blank">Instagram</a> | Mail: cafeterialpaso@gmail.com</p>
+    <form action="home.html">
+        Nombre y Apellido: <input type="text" name="nombre"> <br> <br>
+        Empresa: <input type="text" name="empresa"> <br> <br>
+        Dirección: <input type="text" name="direccion"> <br> <br>
+        Variedad de café <select name="cafe" id="">
+            <option value="expresso">EXPRESSO</option>
+            <option value="americano">AMERICANO</option>
+            <option value="machiato">MACHIATO</option>
+            <option value="cafe con leche">CAFÉ CON LECHE</option>
+            <option value="cappuccino" selected>CAPPUCCINO</option>
+        </select>
+        Cantidad <input type="number" name="cantidad-cafe" id="" value="0" step="1"> 
+        <br> <br>
+        Variedad de pastelería <select name="pasteleria" id="">
+            <option value="brownie">BROWNIE</option>
+            <option value="budin">BUDIN DE LIMÓN</option>
+            <option value="alfajor" selected>ALFAJOR</option>
+            <option value="scon">SCON</option>
+            <option value="coquitos">COQUITOS</option>
+        </select>
+        Cantidad <input type="number" name="cantidad-pasteleria" id="" value="0" step="1"> 
+        <br> <br>
+        <input name="info" type="checkbox"> Tengo cupón de beneficio: <input type="text" name="empresa" placeholder="Ingrese aquí el cupón">
+    </form>
+    <br> <br>
+    <div class="boton">
+        <a href="confirmacion.html"><button>ENVIAR PEDIDO</button></a>
+    </div>
+    <hr>
+    <footer>
+        <p>Whatsapp: +54 9 11 7760-7760 | Instagram <a href="https://www.instagram.com/alpasotrevelin/" target="blank">@alpasotrevelin</a> | Mail: cafeterialpaso@gmail.com</p>
+    </footer>
+
     <hr>
     <a href="home.html">Volver al inicio</a>
 </body>

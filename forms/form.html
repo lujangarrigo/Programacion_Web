@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de ejemplo</title>
+</head>
+<body>
+    <form action="index.html" method="get">
+        Nombre: <input type="text" name="nombre"  maxlength="20"> <br>
+        Apellido: <input type="text" name="apellido" placeholder="Ingrese su apellido" required> <br>
+        Cantidad: <input type="number" name="Cantidad" min="10" max="100"> <br>
+        Edad: <input type="number" name="edad" min="18" max="99" value="30"> <br>
+
+        Password: <input type="password" name="password"><br>
+
+        <input name="info" type="checkbox"> Quiero recibir información <br>
+
+        Fecha de nacimiento: <input type="date" name="fechanac" id=""><br>
+
+        Mail: <input type="email" name="email"> <br>
+        <fieldset>
+            <legend>Elige un color</legend>
+            <label>
+                <input type="radio" name="color" value="azul"> Azul
+            </label>
+            <label>
+                <input type="radio" name="color" value="negro"> Negro
+            </label>
+            <label>
+                <input type="radio" name="color" value="amarillo"> Amarillo
+            </label>
+        </fieldset>
+        <input type="radio" name="sexo" id="">Masculino <br>
+        <input type="radio" name="sexo" id="">Femenino <br>
+        <br>
+        <select name="lenguaje" id="">
+            <option value="js">Javascript</option>
+            <option value="java">Java</option>
+            <option value="python" selected>Python</option>
+        </select>
+        <br><br>
+        <select name="lenguaje" id="" multiple>
+            <option value="js">Javascript</option>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+        </select>
+        <br>
+        Seleccione la imagen: <input type="file" name="foto">
+        <br><br>
+        <label for="comentarios">Ingrese comentarios</label><br><textarea name="comentarios" id="" cols="30" rows="10" placeholder="comentarios"></textarea>
+    </form>
+</body>
+</html>

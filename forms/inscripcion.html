@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Solicitud de inscripcion</h1>
+    <form action="inscripcion.html" method="get">
+        DNI: <input type="number" name="DNI"  maxlength="8" placeholder="Sólo números"> <br> <hr>
+        Nombre: <input type="text" name="nombre"  maxlength="20"> <br> <hr>
+        Apellido: <input type="text" name="apellido" required> <br> <hr>
+        Fecha de nacimiento: <input type="date" name="fechanac" id=""><br> <hr>
+        Mail: <input type="email" name="email"> <br> <hr>
+        Provincia de origen
+        <select name="Provincia de origen" id="">
+            <option value="CABA">CABA</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Salta" selected>Salta</option>
+            <option value="Santa Cruz" selected>Santa Cruz</option>
+            <option value="Córdoba" selected>Córdoba</option>
+            <option value="Otro" selected>Otro</option>
+        </select> <hr>
+        <label for="comentarios">Ingrese comentarios</label><br><textarea name="comentarios" id="" cols="30" rows="10" placeholder="comentarios"></textarea> <br> <hr>
+        <input type="submit" value="Guardar">
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="form_agrupado.html" method="post">
+        <fieldset>
+            <legend>Información Personal</legend>
+            <label for="nombre">Nombre</label><input type="text" name="nombre" tabindex="1">
+            <label for="apellido">Apellido</label><input type="text" name="apellido" tabindex="2">
+            <label for="fechanac"></label><input type="date" name="fechanac" id="" min="1920/01/01" max="2010/12/31" tabindex="3">
+        </fieldset>
+        <fieldset>
+            <legend>Información de la compra</legend>
+            <label for="producto">Producto: </label><input type="text" name="producto" tabindex="4">
+            <label for="cantidad">Cantidad: </label><input type="number" name="cantidad" tabindex="5">
+            <label for="monto">Monto: </label> <input type="number" name="monto" step="0.01" tabindex="6">
+            
+        </fieldset>
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
