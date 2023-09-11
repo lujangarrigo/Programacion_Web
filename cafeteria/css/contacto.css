@@ -1,37 +1,13 @@
 body{
     font-family: sans-serif;
 }
-h1{
-    text-align: center;
-}
-form{
-    border: 1px solid #3a2923;
-    border-radius: 15px;
-    padding: 25px;
-    background-color: bisque;
-}
-.button {
-    width: 180px;
-    height: 40px;
-    background-image: linear-gradient(#faac93,#f09779);
-    border: none;
-    border-radius: 50px;
-    color: black;
-    font-weight: 600;
+.contenedor{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
-    box-shadow: 1px 3px 0px #e78463;
-    transition-duration: .3s;
 }
-.cartIcon {
-    width: 14px;
-    height: fit-content;
-}
-.cartIcon path {
-    fill: black;
+img{
+    height: 400px;
 }
 a{
     text-decoration: none;
@@ -40,13 +16,6 @@ a{
 }
 a:hover{
     color: #e78463;
-}
-.contenedor-boton{
-    display: flex;
-    justify-content: center;
-}
-nav img{
-    height: 80px;
 }
 header{
     display: flex;
@@ -78,7 +47,24 @@ nav a{
 }
 .envio p{
     height: 10px;
+}.envio{
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+    margin-bottom: 8px;
 }
-.pedidos{
+.envio p{
+    height: 10px;
+}
+h1{
+    text-align: center;
+}
+.contacto{
     color: #e78463;
+}
+.contenedor{
+    border: 1px solid #3a2923;
+    border-radius: 15px;
+    padding: 25px;
+    background-color: bisque;
 }

@@ -1,0 +1,124 @@
+body{
+    font-family: sans-serif;
+}
+.envio{
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+    margin-bottom: 8px;
+}
+.envio p{
+    height: 10px;
+}
+
+h1{
+    text-align: center;
+}
+.contenedor-general{
+    display: flex;
+    justify-content: center;
+}
+.contenedor-productos{
+    width: 85%;
+    justify-content: center;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    background-color: bisque;
+    border: 2px solid #47322b;
+    margin-left: 10px;
+}
+aside img{
+    width: 90%;
+}
+.carta{
+    display: flex;
+    flex-flow: row wrap;
+}
+.contenedor-productos img{
+    width: 200px;
+}
+article{
+    border: 2px solid #47322b;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+h2{
+    width: 100%;
+}
+header{
+    display: flex;
+    background-color:  #f4f1eb;
+    align-items: center;
+    padding-left: 20px;
+}
+header img{
+    height: 60px;
+    width: 20%;
+}
+nav{
+    background-color: #f4f1eb;
+    text-align: center;
+    font-size: large;
+    margin: 8px;
+    word-spacing: 30px;
+    display: flex;
+    margin-left: 170px;
+}
+nav a{
+    padding: 20px;
+}
+h2{
+    background-color: bisque;
+}
+.button {
+    width: 180px;
+    height: 40px;
+    background-image: linear-gradient(#faac93,#f09779);
+    border: none;
+    border-radius: 50px;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 1px 3px 0px #e78463;
+    transition-duration: .3s;
+}
+.cartIcon {
+    width: 14px;
+    height: fit-content;
+}
+.cartIcon path {
+    fill: black;
+}
+a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #a34b28;
+}
+a:hover{
+    color: #e78463;
+}
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+}
+nav img{
+    height: 80px;
+}
+.productos{
+    color: #e78463;
+}
