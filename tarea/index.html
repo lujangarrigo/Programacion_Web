@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo de Banner Dinámico</title>
+    <style>
+        #banner {
+            width: 100%;
+            max-height: 300px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #fbb1ce;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        #contenido {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #banner {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+    </style>
+<body>
+    <header>
+        <h1>Diario Online</h1>
+    </header>
+
+    <div id="contenido">
+        <p>Estas son las comidas que puedes recibir en tu domicilio comprando de manera online.</p>
+    </div>
+
+</head>
+<body>
+    <div id="banner">
+        <img id="imagenComida" src="" alt="Comida">
+    </div>
+
+    <script>
+        async function obtenerNuevaImagen() {
+            try {
+                const respuesta = await fetch('https://www.themealdb.com/api/json/v1/1/random.php');
+                const datos = await respuesta.json();
+                return datos.meals[0].strMealThumb; // Propiedad que contiene la URL de la imagen
+            } catch (error) {
+                console.error('Error al obtener la imagen de la API', error);
+            }
+        }
+
+        async function actualizarBanner() {
+            const imagenComida = document.getElementById('imagenComida');
+            const nuevaImagenURL = await obtenerNuevaImagen();
+            imagenComida.src = nuevaImagenURL;
+        }
+
+        setInterval(actualizarBanner, 10000);
+        actualizarBanner();
+    </script>
+</body>
+</html>

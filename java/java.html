@@ -6,8 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        console.log("Hola Mundo!")
-    </script>
+    <button id="boton-ppal">
+        Boton
+    </button>
 </body>
+<script>
+    let boton = document.getElementById("boton-ppal");
+    boton.addEventListener("click", respuesta);
+    function respuesta(){
+        alert('Hizo click en el botón');
+    }
+</script>
 </html>

@@ -1,0 +1,17 @@
+<script>
+    var resultado = 2;
+    const MiPromesa = new Promise((resolve, reject) => {
+        console.log("Estas haciendo algo");
+        if(resultado == 1){
+            resolve("Se hizo");
+        }else{
+            reject("algo falló");
+        }
+    });
+
+    MiPromesa.then(resultado => {
+        console.log(resultado);
+    }).catch(message =>{
+        console.log(message);
+    })
+</script>

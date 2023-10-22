@@ -1,0 +1,15 @@
+<script>
+    
+    const MiPromesa = new Promise((resolve, reject) => {
+        console.log("Estas haciendo algo");
+        setTimeout(function(){
+            resolve("Se ha terminado");
+        }, 5000);
+    });
+
+    MiPromesa.then(resultado => {
+        console.log(resultado);
+    }).catch(message =>{
+        console.log(message);
+    })
+</script>

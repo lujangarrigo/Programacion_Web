@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Hola</h1>
+    <p>hola q tal</p>
+    <ul>
+        <li class="hola">indice</li>
+        <li>hola</li>
+    </ul>
+    <footer class="hola">Acá termina</footer>
+    <script>
+    console.log(document.documentElement);
+    console.log(document.body.getElementsByTagName("li")[0]);
+    var myParagraph = document.createElement("p");
+    myParagraph.innerHTML = "I'm a new paragraph";
+    document.body.appendChild(myParagraph);
+    </script>
+</body>
+</html>

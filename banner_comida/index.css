@@ -1,0 +1,15 @@
+header{
+    height: 100px;
+    background-color: #b4d8b6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#banner{
+    text-align: center;
+    background-color: #dff5e0;
+}
+img{
+    height: 400px;
+    margin-bottom: 20px;
+}
