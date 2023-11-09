@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>Órdenes de Compra</h1>
+  <div id="app">
+    <!-- Formulario de Creación -->
+    <div id="crear-orden">
+      <h2>Crear Orden de Compra</h2>
+      <form id="formulario">
+        <label for="proveedor">Proveedor:</label>
+        <input type="text" id="proveedor" required><br>
+
+        <label for="articulo">Artículo:</label>
+        <input type="text" id="articulo" required>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" required>
+        <button id="agregar-articulo">Agregar Artículo</button><br>
+
+        <button type="submit">Crear Orden de Compra</button>
+      </form>
+    </div>
+
+    <!-- Visualización de Órdenes de Compra -->
+    <div id="ordenes">
+      <h2>Órdenes de Compra</h2>
+      <ul id="lista-ordenes">
+        <!-- Aquí se mostrarán las órdenes de compra -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.getElementById("formulario");
+    const listaOrdenes = document.getElementById("lista-ordenes");
+  
+    formulario.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const proveedor = document.getElementById("proveedor").value;
+      const articulo = document.getElementById("articulo").value;
+      const cantidad = document.getElementById("cantidad").value;
+  
+      // Crear un nuevo elemento de orden
+      const nuevaOrden = document.createElement("li");
+      nuevaOrden.innerHTML = `<strong>Proveedor:</strong> ${proveedor}, <strong>Artículo:</strong> ${articulo}, <strong>Cantidad:</strong> ${cantidad}`;
+  
+      listaOrdenes.appendChild(nuevaOrden);
+  
+      // Limpiar el formulario
+      formulario.reset();
+  
+      // Enviar la orden de compra al servidor
+      enviarOrden(proveedor, articulo, cantidad);
+    });
+  
+    // Función para enviar la orden de compra al servidor
+    function enviarOrden(proveedor, articulo, cantidad) {
+      const data = {
+        proveedor: proveedor,
+        articulo: articulo,
+        cantidad: cantidad
+      };
+  
+      $.ajax({
+        type: 'POST',
+        url: '/api/v1/purchase-orders/',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        success: function (response) {
+          console.log(response);
+        }
+      });
+    }
+  });
+  
+  </script>
+</body>
+</html>
